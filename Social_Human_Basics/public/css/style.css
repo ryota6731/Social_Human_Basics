@@ -1,0 +1,1048 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  width: 100%;
+  font-size: 10px;
+}
+
+main {
+  background-color: #28385e;
+}
+
+section {
+  height: 100vh;
+}
+
+/* PC CSS start*/
+/* login_header start*/
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #28385e;
+}
+
+nav.login_header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a.logo_text {
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 36px;
+  color: #fff;
+}
+
+/* login_btn デザイン */
+.login_btn {
+  display: flex;
+}
+
+.login_btn a {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+}
+
+.login_btn a::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  transform: rotate(45deg);
+}
+
+.login_btn a:hover {
+  text-decoration: none;
+  background-color: #bbbbbb;
+}
+/* login_header end */
+
+/* main_header start */
+header.main_header {
+  height: 170px;
+  width: 100%;
+  background-color: #28385e;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+p.sub_title {
+  font-size: 14px;
+  padding-top: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+a.title {
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+}
+
+/* logout_btn デザイン */
+a.logout_btn {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+}
+
+a.logout_btn:hover {
+  text-decoration: none;
+  background-color: #bbbbbb;
+}
+
+/* nav menu start */
+nav.main_nav {
+  margin-top: 25px;
+  border-top: 2px solid #fff;
+}
+
+.main_nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_list li {
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.nav_list li a:hover {
+  color: #bbbbbb;
+}
+
+.nav_list li::before {
+  content: "";
+  display: block;
+  height: 14px;
+  width: 0;
+  border-right: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav_list li:first-of-type::before {
+  content: none;
+}
+/* nav menu end */
+/* main_header end */
+
+/* footer start */
+footer {
+  margin-top: 1px;
+  height: 50px;
+  width: 100%;
+  background-color: #28385e;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+/* footer end */
+
+/* login.php start */
+.login {
+  display: flex;
+  height: 100vh;
+}
+/* login_form start */
+/* ログインフォーム全体スタイル */
+.login_box {
+  background-image: linear-gradient(55.69275154467101deg, rgba(13, 11, 11, 1) 28.1041411177295%, rgba(13, 10, 11, 1) 28.1041411177295%, rgba(23, 3, 33, 1) 69.18464216888577%);
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.login_box h1 {
+  font-size: 26px;
+}
+
+.login_form {
+  width: 80%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.login_form a {
+  text-transform: none;
+  color: white;
+  font-size: 12px;
+}
+
+/* ログインフォーム：入力ボックスデザイン */
+.login_form input[type="email"],
+.login_form input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 80%;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/* 入力ボックスフォーカス時のスタイル */
+.login_form input[type="email"]:focus,
+.login_form input[type="password"]:focus {
+  width: 100%;
+  border-color: #2ecc71;
+}
+
+/* ログインボタンのスタイル */
+.login_form input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 10px 30px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+/* ログインボタン：hover */
+.login_form input[type="submit"]:hover {
+  background: #2ecc71;
+}
+/* login_form end */
+
+/* side_box start */
+.side_box {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.side_box img {
+  max-width: 100%;
+  height: 100%;
+}
+/* side/box end */
+/* login.php end */
+
+/* signup.php start */
+/* signup_form start */
+.signup {
+  height: 100vh;
+  background-image: linear-gradient(55.69275154467101deg, rgba(13, 11, 11, 1) 28.1041411177295%, rgba(13, 10, 11, 1) 28.1041411177295%, rgba(23, 3, 33, 1) 69.18464216888577%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_box {
+  background-color: black;
+  width: 40%;
+  height: 80%;
+  position: relative;
+  box-shadow: 10px 10px 15px -10px;
+}
+
+.signup_box h1 {
+  font-size: 26px;
+}
+
+.signup_form {
+  width: 80%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.signup_form a {
+  text-transform: none;
+  color: white;
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+/* サインアップフォーム：入力ボックスデザイン */
+.signup_form input[type="email"],
+.signup_form input[type="password"],
+.signup_form input[type="text"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 80%;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/* 入力ボックスフォーカス時のスタイル */
+.signup_form input[type="email"]:focus,
+.signup_form input[type="password"]:focus,
+.signup_form input[type="text"]:focus {
+  width: 100%;
+  border-color: #2ecc71;
+}
+
+/* 登録ボタンのスタイル */
+.signup_form input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 10px 30px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+/* ログインボタン：hover */
+.signup_form input[type="submit"]:hover {
+  background: #2ecc71;
+}
+
+/* err_msg start */
+
+.err_msg {
+  margin-top: 10px;
+  color: red;
+}
+
+#err_msg {
+  font-size: 10px;
+  margin-left: 5px;
+  color: red;
+}
+/* err_msg end */
+
+/* signup_form end */
+/* signup.php end */
+
+/* signup_register start */
+.signup_register {
+  background-image: linear-gradient(55.69275154467101deg, rgba(13, 11, 11, 1) 28.1041411177295%, rgba(13, 10, 11, 1) 28.1041411177295%, rgba(23, 3, 33, 1) 69.18464216888577%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.signup_register h2 {
+  color: #fff;
+  font-size: 46px;
+}
+
+.signup_register a {
+  font-size: 28px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* signup_register end */
+
+/* main.php start */
+.main_page {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 650px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.main_img1,
+.main_img2 {
+  width: 50%;
+  text-align: center;
+}
+
+.main_img1 a img,
+.main_img2 a img {
+  width: 70%;
+  border-radius: 50px;
+  box-shadow: 3px 18px 13px -7px rgba(0, 0, 0, 0.6);
+  transition: 0.25s;
+}
+
+.main_img1 a img:hover,
+.main_img2 a img:hover {
+  box-shadow: none;
+}
+/* main.php end */
+
+/* mypage.php start */
+/* mypage header start*/
+.mypage_header {
+  padding-top: 50px;
+}
+
+img.mypage_icon {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+.mypage_name {
+  font-size: 36px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #fff;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+/* mypage header end */
+
+/* mypage progress start */
+.mypage_progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 90%;
+  height: 600px;
+  border: solid 2px #fff;
+  border-radius: 20px;
+  background-color: #28385e;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+.progress_items {
+  width: 250px;
+  height: 250px;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #111c36;
+  filter: drop-shadow(0 0 0.75rem grey);
+}
+
+.progress_items h2 {
+  color: #fff;
+  padding-top: 85px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.progress_items p {
+  color: #fff;
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+span.late_progress {
+  color: red;
+}
+/* mypage progress end */
+
+/* mypage edit start */
+.mypage_edit {
+  width: 90%;
+  height: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mypage_edit a {
+  font-size: 20px;
+  line-height: 130px;
+}
+
+.account_edit_btn {
+  margin-right: 25px;
+  top: 12px;
+  right: 10px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+}
+
+.account_delete_btn {
+  margin-left: 25px;
+  top: 12px;
+  right: 10px;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+}
+
+.account_edit_btn:hover,
+.account_delete_btn:hover {
+  text-decoration: none;
+  background-color: #bbbbbb;
+}
+/* mypage edit end */
+/* mypage.php end */
+
+/* account_edit.php start */
+.accout_edit_container {
+  padding-bottom: 30px;
+  background-color: #28385e;
+  position: relative;
+}
+
+.account_edit_main {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #111c36;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.account_edit_main h1 {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+/* account_edit_form start */
+.account_edit_form {
+  position: absolute;
+  padding-top: 150px;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.account_edit_form input[type="text"],
+.account_edit_form input[type="email"] {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #fff;
+  transition: 0.25s;
+}
+
+.account_edit_form input[type="file"] {
+  margin: 0 auto;
+}
+
+.account_edit_form input[type="text"]:focus,
+.account_edit_form input[type="email"]:focus {
+  border-color: #2ecc71;
+}
+
+.account_edit_form input[type="file"] {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+.account_edit_form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 15px 50px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.account_edit_form input[type="submit"]:hover {
+  background: #bbbbbb;
+}
+
+.account_edit_form label {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.account_edit_form p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+/* account_edit_form end */
+/* account_edit.php end */
+
+/* account_edit_confirm start */
+.confirm_box {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.text_box {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 30px;
+  margin-top: 15px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.label_text {
+  margin-top: 50px;
+  color: #fff;
+}
+
+.input_passwd {
+  display: block;
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="password"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+
+.edit_btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.edit_btn:hover {
+  background-color: #bbbbbb;
+}
+
+.submit_box {
+  padding-top: 100px;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* account_edit_confirm end */
+
+/* profile_icon start */
+img#preview {
+  max-height: 250px;
+  max-width: 300px;
+}
+/* profile_icon start */
+
+/* contents_top start */
+.contents_main {
+  padding-bottom: 50px;
+}
+
+.contents_title h2 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+
+.contents_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 90%;
+  height: 600px;
+  border: solid 2px #fff;
+  border-radius: 20px;
+  background-color: #28385e;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+.contents_items {
+  width: 250px;
+  height: 250px;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #111c36;
+  filter: drop-shadow(0 0 0.75rem grey);
+}
+
+.contents_items:hover {
+  filter: none;
+}
+
+.contents_items h2 {
+  color: #fff;
+  padding-top: 85px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contents_items p {
+  color: #fff;
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+span.late_progress {
+  color: red;
+}
+/* contents_top end */
+
+/* board_top start */
+section.board_container {
+  height: 100%;
+  background-color: #28385e;
+}
+
+h2.board_title {
+  width: 100%;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search_box {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search_form {
+  width: 30%;
+  height: 25px;
+}
+
+.post_btn {
+  text-align: center;
+  color: #000000;
+  display: block;
+  background-color: #cccccc;
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  padding-top: 8px;
+  margin-left: auto;
+  margin-right: 60px;
+  margin-bottom: 10px;
+}
+
+.post_btn:hover {
+  background-color: #bbbbbb;
+}
+
+.board_box {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #111c36;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+
+table.board_lists {
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.board_btn_box {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+/* 掲示板アイコン */
+img.board_icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+/* いいね */
+
+.btn_good_done {
+  background-color: red;
+}
+
+div.paging {
+  width: 100%;
+  text-align: center;
+}
+
+div.paging a {
+  font-size: 14px;
+  padding: 0 5px;
+}
+/* board_top end */
+
+/* board_post start */
+.text_area {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.textarea_box {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 150px;
+  margin-top: 15px;
+  padding-top: 5px;
+}
+
+.btn_position {
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cccccc;
+  border-radius: 50vh;
+  text-align: center;
+  width: 100px;
+  margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+a.post_submit {
+  font-size: 14px;
+  color: #000000;
+}
+/* board_post end */
+
+/* board_search start */
+.search_msg {
+  color: #fff;
+}
+/* board_search end */
+
+/* content1,content2,content3 start */
+.content_container {
+  width: 100%;
+  height: 100%;
+  background-color: #28385e;
+  padding-bottom: 50px;
+}
+
+.content_header h2 {
+  font-size: 50px;
+  padding-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.definition_box {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #111c36;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+p.definition_1 {
+  height: 130px;
+}
+
+
+
+.content_header p {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.content_chapters {
+  width: 100%;
+  margin-top: 90px;
+}
+
+.chapter_img_link {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.chapter_img {
+  width: 100%;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 16px #000000);
+}
+
+.chapter h2 {
+  color: #fff;
+  font-size: 35px;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+/* content1,content2,content3 end */
+
+/* PC CSS end */
+
+/* スマホ CSS
+*
+*
+*
+*
+*/
+@media screen and (max-width: 599px) {
+  /* login_header start */
+  header {
+    height: 50px;
+  }
+
+  a.signup_text {
+    font-size: 8px;
+  }
+
+  a.logo_text {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+
+  .login_btn a {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  /* login_header end */
+
+  /* footer start */
+  footer {
+    height: 30px;
+  }
+  /* footer end */
+
+  /* login.php start */
+  .login {
+    height: 620px;
+  }
+  /* login_form start */
+  .login_box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .login_form {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .login_box h1 {
+    font-size: 36px;
+  }
+
+  /* login_form end */
+
+  /* side_box start */
+  .side_box {
+    display: none;
+  }
+  /* side_box end */
+  /* login.php end */
+
+  /* signup.php start */
+  .signup_box {
+    width: 100%;
+    height: 0%;
+  }
+  /* signup.php end */
+}
+/* スマホCSS end */
