@@ -10,11 +10,7 @@ $user_id = $user['id'];
 $controller = new Controller();
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // 編集実行
 // bool $result

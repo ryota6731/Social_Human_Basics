@@ -12,11 +12,7 @@ $user_passwd = $user['password'];
 $controller = new Controller();
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // $_POSTの値を格納
 

@@ -19,11 +19,7 @@ $controller = new Controller();
 // var_dump($_SESSION);
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // XSS
 function h($data) {

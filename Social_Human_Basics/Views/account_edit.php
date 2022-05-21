@@ -12,11 +12,7 @@ $user_email = $user['email'];
 $controller = new Controller();
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 //  DBから登録情報取得しテキストボックスに表示させる
 

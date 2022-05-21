@@ -12,11 +12,7 @@ $role = $_SESSION['user']['role'];
 $controller = new Controller();
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // 削除実行
 if (($user_id === $_GET['user_id'] && isset($_GET)) || $role == 1) {

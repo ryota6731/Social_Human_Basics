@@ -155,6 +155,12 @@ class Controller {
       return $result = true;
     }
 
+    // falseならlogin.phpへ遷移
+    if (!$result) {
+      header('Location: login.php');
+      exit();
+    }
+
     return $result;
   }
 

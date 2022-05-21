@@ -6,11 +6,7 @@ session_start();
 $controller = new Controller();
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // // 投稿内容を変数に格納
 // $contact = $_POST;

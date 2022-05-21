@@ -10,11 +10,7 @@ $user = $_SESSION['user'];
 $user_id = $user['id'];
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // XSS
 function h($data) {

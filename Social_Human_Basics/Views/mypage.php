@@ -1,27 +1,28 @@
 <?php
-require_once(ROOT_PATH . '/Controllers//Controller.php');
+require_once(ROOT_PATH . '/Controllers/Controller.php');
 require_once(ROOT_PATH . '/Models/Board.php');
 session_start();
+
+$controller = new Controller();
+
+// ログインチェック
+$login_check = $controller->loginCheck();
 
 // ログイン情報
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 $user_name = $user['name'];
 
-$controller = new Controller();
-// var_dump($_SESSION);
-
-// ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-} else {
+if ($login_check) {
   $userData = $controller->getUserById($user_id);
   $_SESSION['user'] = $userData;
   $user = $_SESSION['user'];
   $user_name = $user['name'];
 }
+
+
+// var_dump($_SESSION);
+
 
 // プロフアイコン名取得
 $icon_name = $controller->getProfileIcon($user_id);

@@ -11,11 +11,7 @@ $user_id = $user['id'];
 $role = $_SESSION['user']['role'];
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // XSS
 function h($data) {

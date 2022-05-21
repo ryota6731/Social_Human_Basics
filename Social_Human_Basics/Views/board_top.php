@@ -7,11 +7,7 @@ $controller = new Controller();
 // var_dump($_SESSION);
 
 // ログインチェック
-$login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // ログインユーザID格納
 $u_id = $_SESSION['user']['id'];

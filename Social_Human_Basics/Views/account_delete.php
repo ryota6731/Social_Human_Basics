@@ -14,10 +14,7 @@ $controller = new Controller();
 
 // ログインチェック
 $login_check = $controller->loginCheck();
-if (!$login_check) {
-  header('Location: login.php');
-  exit();
-}
+$controller->loginCheck();
 
 // パスワードエラー取得
 if (isset($_SESSION['err'])) {
